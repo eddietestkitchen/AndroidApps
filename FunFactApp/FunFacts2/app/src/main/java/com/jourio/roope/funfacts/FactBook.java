@@ -2,10 +2,9 @@ package com.jourio.roope.funfacts;
 
 import java.util.Random;
 
-
 public class FactBook {
-    // Fields (Member Variables) - Properties about the object
-    private String[] mFacts = {
+    // Fields or Member Variables - Properties about the object
+    private String[] facts = {
             "Ants stretch when they wake up in the morning.",
             "Ostriches can run faster than horses.",
             "Olympic gold medals are actually made mostly of silver.",
@@ -19,16 +18,10 @@ public class FactBook {
 
     // Methods - Actions the object can take
     public String getFact() {
-        String fact = "";
         // Randomly select a fact
         Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.nextInt(mFacts.length);
-        fact = mFacts[randomNumber];
-
-        return fact;
-
+        int randomNumber = randomGenerator.nextInt(facts.length);
+        return facts[randomNumber];
     }
-
-
-
 }
+

@@ -29,6 +29,7 @@ public class FunFactsActivity extends AppCompatActivity {
         // Assign the Views from the layout file to the corresponding variables
         factTextView = (TextView) findViewById(R.id.factTextView);
         showFactButton = (Button) findViewById(R.id.showFactButton);
+
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         View.OnClickListener listener = new View.OnClickListener() {

@@ -1,2 +1,5 @@
-Screenshots:
-![alt text](http://i.imgur.com/97OsFQu.png)  ![alt text](http://i.imgur.com/qIChRBb.png) ![alt  ![alt text](http://i.imgur.com/lkVl1ct.png) ![alt text](http://i.imgur.com/GmmnpUH.png) ![alt text](http://i.imgur.com/EviwuoF.png)
+Fun Facts app, displays different facts and selects different color when the button is pressed.
+
+Screenshots
+
+![alt text](http://i.imgur.com/ehfrh7A.jpg)

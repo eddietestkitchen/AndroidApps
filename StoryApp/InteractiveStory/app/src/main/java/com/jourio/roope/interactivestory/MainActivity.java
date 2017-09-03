@@ -25,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = nameField.getText().toString(); // getText() returns editable datatype, toString() converts it to String.
-                startStory();
+                startStory(name);
             }
         });
     }
 
-    private void startStory() {
+    private void startStory(String name) {
         Intent intent = new Intent(this, StoryActivity.class);
+        intent.putExtra("name", name);
         startActivity(intent);
     }
 }

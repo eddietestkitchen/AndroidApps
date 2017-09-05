@@ -1,9 +1,11 @@
-package com.jourio.roope.interactivestory;
+package com.jourio.roope.interactivestory.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.jourio.roope.interactivestory.R;
 
 public class StoryActivity extends AppCompatActivity {
 

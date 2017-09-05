@@ -1,4 +1,4 @@
-package com.jourio.roope.interactivestory;
+package com.jourio.roope.interactivestory.ui;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.jourio.roope.interactivestory.R;
 
 public class MainActivity extends AppCompatActivity {
 

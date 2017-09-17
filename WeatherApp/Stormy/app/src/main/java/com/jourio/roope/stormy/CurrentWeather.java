@@ -30,37 +30,37 @@ public class CurrentWeather {
     }
 
     public int getIconId() {
-        int iconId = R.mipmap.clear_day;
+        int iconId = R.drawable.clear_day;
 
         if (mIcon.equals("clear-day")) {
-            iconId = R.mipmap.clear_day;
+            iconId = R.drawable.clear_day;
         }
         else if (mIcon.equals("clear-night")) {
-            iconId = R.mipmap.clear_night;
+            iconId = R.drawable.clear_night;
         }
         else if (mIcon.equals("rain")) {
-            iconId = R.mipmap.rain;
+            iconId = R.drawable.rain;
         }
         else if (mIcon.equals("snow")) {
-            iconId = R.mipmap.snow;
+            iconId = R.drawable.snow;
         }
         else if (mIcon.equals("sleet")) {
-            iconId = R.mipmap.sleet;
+            iconId = R.drawable.sleet;
         }
         else if (mIcon.equals("wind")) {
-            iconId = R.mipmap.wind;
+            iconId = R.drawable.wind;
         }
         else if (mIcon.equals("fog")) {
-            iconId = R.mipmap.fog;
+            iconId = R.drawable.fog;
         }
         else if (mIcon.equals("cloudy")) {
-            iconId = R.mipmap.cloudy;
+            iconId = R.drawable.cloudy;
         }
         else if (mIcon.equals("partly-cloudy-day")) {
-            iconId = R.mipmap.partly_cloudy;
+            iconId = R.drawable.partly_cloudy;
         }
         else if (mIcon.equals("partly-cloudy-night")) {
-            iconId = R.mipmap.cloudy_night;
+            iconId = R.drawable.cloudy_night;
         }
 
         return iconId;

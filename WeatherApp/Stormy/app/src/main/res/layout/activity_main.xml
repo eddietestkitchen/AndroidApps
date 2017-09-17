@@ -12,13 +12,13 @@
         android:id="@+id/temperatureLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="100"
+        android:text="--"
         android:textColor="@android:color/white"
         android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         />
 
     <ImageView
@@ -40,43 +40,43 @@
         android:id="@+id/timeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="At 5:00 PM it will be"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="..."
         android:textColor="#80ffffff"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/temperatureLabel"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"/>
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
         android:id="@+id/locationLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
-        android:text="Kerava, Finland"
+        android:text="Helsinki, Finland"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/timeLabel"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"/>
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <ImageView
         android:id="@+id/iconImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/cloudy_night"
-        app:layout_constraintRight_toLeftOf="@+id/locationLabel"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintVertical_bias="0.144"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/locationLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144"
+        app:srcCompat="@mipmap/cloudy_night"/>
 
     <LinearLayout
         android:layout_width="344dp"
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="0.88"
+                android:text="--"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"/>
 
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="100%"
+                android:text="--"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"/>
         </LinearLayout>
@@ -146,7 +146,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
-        android:text="Stormy with a chance of meatballs"
+        android:text="Getting current weather..."
         android:textColor="@android:color/white"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"

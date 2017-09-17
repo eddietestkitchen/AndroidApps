@@ -1,8 +1,11 @@
 package com.jourio.roope.stormy;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
     private CurrentWeather mCurrentWeather;
 
-
-
     @BindView(R.id.timeLabel) TextView mTimeLabel;
     @BindView(R.id.temperatureLabel) TextView mTemperatureLabel;
     @BindView(R.id.humidityValue) TextView mHumidityValue;
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         String apiKey = "92404b5cbe52d93eb96035b97f166d07";
-        double latitude = 37.8267;
-        double longitude = -122.4233;
+        double latitude = 60.1920;
+        double longitude = 24.9458;
         String forecastUrl = "https://api.darksky.net/forecast/" + apiKey +
                 "/" + latitude + "," + longitude;
 
@@ -104,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
         mHumidityValue.setText(mCurrentWeather.getHumidity() + "");
         mPrecipValue.setText(mCurrentWeather.getPrecipChance() + "%");
         mSummaryLabel.setText(mCurrentWeather.getSummary());
+
+        Drawable drawable = ContextCompat.getDrawable(this, mCurrentWeather.getIconId());
+        mIconImageView.setImageDrawable(drawable);
     }
 
     private CurrentWeather getCurrentDetails(String jsonData) throws JSONException {

@@ -1,0 +1,98 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:3:11-44
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:4:5-66
+	android:name
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:5:22-76
+application
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:8:5-24:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/roope/.android/build-cache/f1886df57313e4db60dfb050cac811337fa24d97/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/roope/.android/build-cache/ea0b30c206b5249ff79d2fa0f13ccd9af7222e4b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/roope/.android/build-cache/e29b2889f8867f915766ea70ca05e58d5eeb7929/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/roope/.android/build-cache/e18a81d1cf6327ee3d127eabc518529f85494da6/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/roope/.android/build-cache/84983fba7ddd69bab067c77cb29b091c6af35d00/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/roope/.android/build-cache/c7228781d8cc712a6b3dd0c620a0e01f6355d002/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/roope/.android/build-cache/a750add2dbae37f5206a523533efb605a78eec47/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/roope/.android/build-cache/891297ddd46f2068139a899ebd89f9d940c67d67/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/roope/.android/build-cache/e2e927c976802c3a913c86650a82b0bc3a346a50/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/roope/.android/build-cache/c67df29d5d4837e3d2e002c9502506274c91bb75/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:11:9-41
+	android:supportsRtl
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:13:9-35
+	android:roundIcon
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:12:9-54
+	android:allowBackup
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:9:9-35
+	android:icon
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:10:9-43
+	android:theme
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.jourio.roope.stormy.MainActivity
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:16:9-23:20
+	android:screenOrientation
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:17:13-49
+	android:name
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:16:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:19:17-68
+	android:name
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:21:17-76
+	android:name
+		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/roope/.android/build-cache/f1886df57313e4db60dfb050cac811337fa24d97/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/roope/.android/build-cache/ea0b30c206b5249ff79d2fa0f13ccd9af7222e4b/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/roope/.android/build-cache/e29b2889f8867f915766ea70ca05e58d5eeb7929/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/roope/.android/build-cache/e18a81d1cf6327ee3d127eabc518529f85494da6/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/roope/.android/build-cache/84983fba7ddd69bab067c77cb29b091c6af35d00/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/roope/.android/build-cache/c7228781d8cc712a6b3dd0c620a0e01f6355d002/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/roope/.android/build-cache/a750add2dbae37f5206a523533efb605a78eec47/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/roope/.android/build-cache/891297ddd46f2068139a899ebd89f9d940c67d67/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/roope/.android/build-cache/e2e927c976802c3a913c86650a82b0bc3a346a50/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/roope/.android/build-cache/461bd9f66196d81a583f8bdfb0add17eab1231ce/output/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/roope/.android/build-cache/c67df29d5d4837e3d2e002c9502506274c91bb75/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/roope/.android/build-cache/f1886df57313e4db60dfb050cac811337fa24d97/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/roope/.android/build-cache/f1886df57313e4db60dfb050cac811337fa24d97/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/roope/.android/build-cache/ea0b30c206b5249ff79d2fa0f13ccd9af7222e4b/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/roope/.android/build-cache/e29b2889f8867f915766ea70ca05e58d5eeb7929/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/roope/.android/build-cache/e18a81d1cf6327ee3d127eabc518529f85494da6/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/roope/.android/build-cache/84983fba7ddd69bab067c77cb29b091c6af35d00/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/roope/.android/build-cache/c7228781d8cc712a6b3dd0c620a0e01f6355d002/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/roope/.android/build-cache/a750add2dbae37f5206a523533efb605a78eec47/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/roope/.android/build-cache/891297ddd46f2068139a899ebd89f9d940c67d67/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/roope/.android/build-cache/c67df29d5d4837e3d2e002c9502506274c91bb75/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/roope/.android/build-cache/f1886df57313e4db60dfb050cac811337fa24d97/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/roope/.android/build-cache/f1886df57313e4db60dfb050cac811337fa24d97/output/AndroidManifest.xml:26:9-47

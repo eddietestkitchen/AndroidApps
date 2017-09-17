@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/clear_night.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/clear_night.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/cloudy_night.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/cloudy_night.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/refresh.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/refresh.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/degree.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/degree.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/fog.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/fog.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/sleet.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/sleet.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/clear_day.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/clear_day.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/rain.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/rain.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher_round.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/snow.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/snow.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/wind.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/wind.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/cloudy.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/cloudy.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/sunny.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/sunny.png"
+    },
+    {
+        "merged": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/build/intermediates/res/merged/debug/mipmap-xhdpi/partly_cloudy.png",
+        "source": "/home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/res/mipmap-xhdpi/partly_cloudy.png"
+    }
+]

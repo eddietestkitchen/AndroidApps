@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
 
     private CurrentWeather mCurrentWeather;
-    private TextView mTemperatureLabel;
+
 
 
     @BindView(R.id.timeLabel) TextView mTimeLabel;
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
 
         String apiKey = "92404b5cbe52d93eb96035b97f166d07";
         double latitude = 37.8267;
@@ -72,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
                         Log.v(TAG, jsonData);
                         if (response.isSuccessful()) {
                             mCurrentWeather = getCurrentDetails(jsonData);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    updateDisplay();
+                                }
+                            });
                         } else {
                             alertUserAboutError();
                         }
@@ -91,6 +96,14 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "Main UI code is running!");
 
 
+    }
+
+    private void updateDisplay() {
+        mTemperatureLabel.setText(mCurrentWeather.getTemperature() + "");
+        mTimeLabel.setText("At " + mCurrentWeather.getFormattedTime() + " it will be");
+        mHumidityValue.setText(mCurrentWeather.getHumidity() + "");
+        mPrecipValue.setText(mCurrentWeather.getPrecipChance() + "%");
+        mSummaryLabel.setText(mCurrentWeather.getSummary());
     }
 
     private CurrentWeather getCurrentDetails(String jsonData) throws JSONException {

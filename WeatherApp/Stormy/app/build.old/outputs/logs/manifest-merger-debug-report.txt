@@ -45,7 +45,7 @@ MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/roope/.andr
 		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:10:9-43
 	android:theme
 		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:14:9-40
-activity#com.jourio.roope.stormy.MainActivity
+activity#com.jourio.roope.stormy.ui.MainActivity
 ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:16:9-23:20
 	android:screenOrientation
 		ADDED from /home/roope/Documents/AndroidAppsTH/AndroidApps/WeatherApp/Stormy/app/src/main/AndroidManifest.xml:17:13-49

@@ -6,7 +6,7 @@
     android:background="#FC970B"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jourio.roope.stormy.MainActivity">
+    tools:context="com.jourio.roope.stormy.ui.MainActivity">
 
     <TextView
         android:id="@+id/temperatureLabel"

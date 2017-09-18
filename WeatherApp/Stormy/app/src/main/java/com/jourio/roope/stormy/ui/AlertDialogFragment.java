@@ -1,10 +1,12 @@
-package com.jourio.roope.stormy;
+package com.jourio.roope.stormy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import com.jourio.roope.stormy.R;
 
 public class AlertDialogFragment extends DialogFragment {
 

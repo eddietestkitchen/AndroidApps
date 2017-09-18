@@ -1,10 +1,12 @@
-package com.jourio.roope.stormy;
+package com.jourio.roope.stormy.weather;
+
+import com.jourio.roope.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CurrentWeather {
+public class Current {
     private String mIcon;
     private long mTime;
     private double mTemperature;

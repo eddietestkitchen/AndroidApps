@@ -10,19 +10,12 @@
 
     <ListView
         android:id="@android:id/list"
-        android:layout_width="344dp"
-        android:layout_height="551dp"
+        android:layout_width="363dp"
+        android:layout_height="582dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/bg_gradient"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"/>
-
-    <TextView
-        android:id="@android:id/empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/no_daily_forecast_data"
-        android:textColor="#ffffffff"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="275dp"/>
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-8dp"/>
 
 </android.support.constraint.ConstraintLayout>

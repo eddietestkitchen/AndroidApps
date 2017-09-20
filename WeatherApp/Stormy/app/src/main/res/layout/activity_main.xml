@@ -201,12 +201,12 @@
             android:id="@+id/dailyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
             android:background="#40ffffff"
-            android:text="Button"
+            android:text="7 DAY"
             android:textColor="#ffffffff"
-            tools:text="7 DAY"
-            android:layout_marginLeft="1dp"/>
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

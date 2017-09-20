@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#FC970B"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
     tools:context="com.jourio.roope.stormy.ui.MainActivity">
 
     <TextView
@@ -25,6 +25,7 @@
         android:id="@+id/degreeImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,8 +34,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.34"
-        app:srcCompat="@mipmap/degree"
-        android:layout_marginEnd="32dp"/>
+        app:srcCompat="@mipmap/degree"/>
 
     <TextView
         android:id="@+id/timeLabel"
@@ -79,13 +79,13 @@
         app:srcCompat="@mipmap/cloudy_night"/>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/temperatureLabel"
-        tools:layout_editor_absoluteX="8dp"
-        android:id="@+id/linearLayout">
+        tools:layout_editor_absoluteX="8dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -142,35 +142,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:text="Getting current weather..."
         android:textColor="@android:color/white"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintVertical_bias="0.413"/>
 
     <ImageView
         android:id="@+id/refreshImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/refresh"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"/>
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/refresh"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -183,10 +183,10 @@
     <LinearLayout
         android:layout_width="359dp"
         android:layout_height="45dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
         android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/summaryLabel">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel"
+        tools:layout_editor_absoluteX="1dp">
 
         <Button
             android:id="@+id/hourlyButton"
@@ -205,7 +205,8 @@
             android:background="#40ffffff"
             android:text="Button"
             android:textColor="#ffffffff"
-            tools:text="7 DAY"/>
+            tools:text="7 DAY"
+            android:layout_marginLeft="1dp"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

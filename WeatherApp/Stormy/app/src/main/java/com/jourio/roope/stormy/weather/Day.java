@@ -1,10 +1,13 @@
 package com.jourio.roope.stormy.weather;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class Day {
+public class Day implements Parcelable {
     private long mTime;
     private String mSummary;
     private double mTemperatureMax;
@@ -60,5 +63,19 @@ public class Day {
         formatter.setTimeZone(TimeZone.getTimeZone(mTimezone));
         Date dateTime = new Date(mTime * 1000);
         return formatter.format(dateTime);
+    }
+
+    @Override
+    public int describeContents() {
+
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeLong(mTime);
+        parcel.writeString(mSummary);
+        parcel.writeDouble(mTemperatureMax);
+        parcel.writeString(mIcon);
+        parcel.writeString(mTimezone);
     }
 }

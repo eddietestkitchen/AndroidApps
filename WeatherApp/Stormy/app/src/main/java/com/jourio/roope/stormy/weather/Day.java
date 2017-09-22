@@ -78,4 +78,24 @@ public class Day implements Parcelable {
         parcel.writeString(mIcon);
         parcel.writeString(mTimezone);
     }
+
+    private Day(Parcel in) {
+        mTime = in.readLong();
+        mSummary = in.readString();
+        mTemperatureMax = in.readDouble();
+        mIcon = in.readString();
+        mTimezone = in.readString();
+    }
+
+    public static final Creator<Day> CREATOR = new Creator<Day>() {
+        @Override
+        public Day createFromParcel(Parcel parcel) {
+            return new Day(parcel);
+        }
+
+        @Override
+        public Day[] newArray(int i) {
+            return new Day[i];
+        }
+    }
 }

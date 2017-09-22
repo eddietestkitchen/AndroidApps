@@ -67,7 +67,7 @@ public class Day implements Parcelable {
 
     @Override
     public int describeContents() {
-
+        return 0;
     }
 
     @Override
@@ -87,6 +87,8 @@ public class Day implements Parcelable {
         mTimezone = in.readString();
     }
 
+    public Day() { }
+
     public static final Creator<Day> CREATOR = new Creator<Day>() {
         @Override
         public Day createFromParcel(Parcel parcel) {
@@ -97,5 +99,5 @@ public class Day implements Parcelable {
         public Day[] newArray(int i) {
             return new Day[i];
         }
-    }
+    };
 }

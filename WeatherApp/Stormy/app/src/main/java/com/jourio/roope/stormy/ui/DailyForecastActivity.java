@@ -27,7 +27,7 @@ public class DailyForecastActivity extends Activity {
     private Day[] mDays;
 
     @BindView(android.R.id.list) ListView mListView;
-    @BindView(android.R.id.empty) TextView mEmptyText;
+    @BindView(android.R.id.empty) TextView mEmptyText; // TODO: Not compiling when pressing the 7 day button. Needs fixing.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

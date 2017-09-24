@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Parcelable;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,13 +22,16 @@ import java.util.Arrays;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Optional;
 
 public class DailyForecastActivity extends Activity {
 
     private Day[] mDays;
 
     @BindView(android.R.id.list) ListView mListView;
-    @BindView(android.R.id.empty) TextView mEmptyText; // TODO: Not compiling when pressing the 7 day button. Needs fixing.
+
+    @Nullable
+    @BindView(android.R.id.empty) TextView mEmptyText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

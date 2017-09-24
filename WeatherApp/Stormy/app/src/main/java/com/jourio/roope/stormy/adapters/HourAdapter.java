@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jourio.roope.stormy.R;
+import com.jourio.roope.stormy.weather.Hour;
 
 public class HourAdapter extends RecyclerView.Adapter<HourAdapter.HourViewHolder> {
 
@@ -39,6 +40,13 @@ public class HourAdapter extends RecyclerView.Adapter<HourAdapter.HourViewHolder
             mSummaryLabel = (TextView) itemView.findViewById(R.id.summaryLabel);
             mTemperatureLabel = (TextView) itemView.findViewById(R.id.temperatureLabel);
             mIconImageView = (ImageView) itemView.findViewById(R.id.iconImageView);
+        }
+
+        public void bindHour(Hour hour) {
+            mTimeLabel.setText(hour.getHour());
+            mSummaryLabel.setText(hour.getSummary());
+            mTemperatureLabel.setText(hour.getTemperature() + "");
+            mIconImageView.setImageResource(hour.getIconId());
         }
     }
 }

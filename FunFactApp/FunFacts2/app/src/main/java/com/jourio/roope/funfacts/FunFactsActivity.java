@@ -23,8 +23,8 @@ public class FunFactsActivity extends AppCompatActivity {
     private TextView factTextView;
     private Button showFactButton;
     private RelativeLayout relativeLayout;
-    private String mFact;
-    private int mColor;
+    private String mFact = factBook.facts[0];
+    private int mColor = Color.parseColor(ColorWheel.colors[8]);
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -35,6 +35,17 @@ public class FunFactsActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        mFact = savedInstanceState.getString(KEY_FACT);
+        factTextView.setText(mFact);
+        relativeLayout.setBackgroundColor(mColor);
+        showFactButton.setTextColor(mColor);
+        mColor = savedInstanceState.getInt(KEY_COLOR);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fun_facts);
@@ -42,7 +53,6 @@ public class FunFactsActivity extends AppCompatActivity {
         // Assign the Views from the layout file to the corresponding variables
         factTextView = (TextView) findViewById(R.id.factTextView);
         showFactButton = (Button) findViewById(R.id.showFactButton);
-
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         View.OnClickListener listener = new View.OnClickListener() {

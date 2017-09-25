@@ -14,12 +14,25 @@ import java.util.Random;
 
 public class FunFactsActivity extends AppCompatActivity {
     public static final String TAG = FunFactsActivity.class.getSimpleName();
+    
+    private static final String KEY_FACT = "KEY_FACT";
+    private static final String KEY_COLOR = "KEY_COLOR";
     private FactBook factBook = new FactBook();
     private ColorWheel colorWheel = new ColorWheel();
     // Declare our View variables
     private TextView factTextView;
     private Button showFactButton;
     private RelativeLayout relativeLayout;
+    private String mFact;
+    private int mColor;
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        
+        outState.putString(KEY_FACT, mFact);
+        outState.putInt(KEY_COLOR, mColor);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +48,14 @@ public class FunFactsActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String fact = factBook.getFact();
+                mFact = factBook.getFact();
 
                 // Update the screen with our new fact
-                factTextView.setText(fact);
+                factTextView.setText(mFact);
 
-                int color = colorWheel.getColor();
-                relativeLayout.setBackgroundColor(color);
-                showFactButton.setTextColor(color);
+                mColor = colorWheel.getColor();
+                relativeLayout.setBackgroundColor(mColor);
+                showFactButton.setTextColor(mColor);
             }
         };
         showFactButton.setOnClickListener(listener);
@@ -51,3 +64,26 @@ public class FunFactsActivity extends AppCompatActivity {
         Log.d(TAG, "We're logging from the onCreate() method!");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

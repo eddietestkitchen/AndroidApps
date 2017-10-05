@@ -68,13 +68,13 @@
       <file leaf-file-name="AlbumDetailActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+            <state relative-caret-position="624">
+              <caret line="148" column="55" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
               <folding>
                 <element signature="e#3676#3858#0" expanded="true" />
                 <element signature="e#3857#3858#0" expanded="true" />
-                <element signature="e#4532#4714#0" expanded="true" />
-                <element signature="e#4713#4714#0" expanded="true" />
+                <element signature="e#4525#4707#0" expanded="true" />
+                <element signature="e#4706#4707#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2396,8 +2396,8 @@
           <folding>
             <element signature="e#3676#3858#0" expanded="true" />
             <element signature="e#3857#3858#0" expanded="true" />
-            <element signature="e#4532#4714#0" expanded="true" />
-            <element signature="e#4713#4714#0" expanded="true" />
+            <element signature="e#4525#4707#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2428,8 +2428,8 @@
           <folding>
             <element signature="e#3676#3858#0" expanded="true" />
             <element signature="e#3857#3858#0" expanded="true" />
-            <element signature="e#4532#4714#0" expanded="true" />
-            <element signature="e#4713#4714#0" expanded="true" />
+            <element signature="e#4525#4707#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2504,13 +2504,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+        <state relative-caret-position="624">
+          <caret line="148" column="55" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
           <folding>
             <element signature="e#3676#3858#0" expanded="true" />
             <element signature="e#3857#3858#0" expanded="true" />
-            <element signature="e#4532#4714#0" expanded="true" />
-            <element signature="e#4713#4714#0" expanded="true" />
+            <element signature="e#4525#4707#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
           </folding>
         </state>
       </provider>

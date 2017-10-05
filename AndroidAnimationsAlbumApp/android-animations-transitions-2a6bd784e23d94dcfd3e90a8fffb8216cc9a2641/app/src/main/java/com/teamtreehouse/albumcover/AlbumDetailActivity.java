@@ -124,10 +124,10 @@ public class AlbumDetailActivity extends Activity {
         expandTransitionSet.addTransition(fadeLyrics);
 
         // Collapsed Scene.
-        Scene mExpandedScene = Scene.getSceneForLayout(transitionRoot,
-                R.layout.activity_album_detail_expanded, this);
+        Scene mCollapsedScene = Scene.getSceneForLayout(transitionRoot,
+                R.layout.activity_album_detail, this);
 
-        mExpandedScene.setEnterAction(new Runnable() {
+        mCollapsedScene.setEnterAction(new Runnable() {
             @Override
             public void run() {
                 ButterKnife.bind(AlbumDetailActivity.this);
@@ -135,16 +135,18 @@ public class AlbumDetailActivity extends Activity {
             }
         });
 
-        TransitionSet expandTransitionSet = new TransitionSet();
-        expandTransitionSet.setOrdering(TransitionSet.ORDERING_SEQUENTIAL);
-        ChangeBounds changeBounds = new ChangeBounds();
-        changeBounds.setDuration(200);
-        expandTransitionSet.addTransition(changeBounds);
+        TransitionSet collapseTransitionSet = new TransitionSet();
+        collapseTransitionSet.setOrdering(TransitionSet.ORDERING_SEQUENTIAL);
 
-        Fade fadeLyrics = new Fade();
-        fadeLyrics.addTarget(R.id.lyrics);
-        fadeLyrics.setDuration(150);
-        expandTransitionSet.addTransition(fadeLyrics);
+
+        Fade fadeOutLyrics = new Fade();
+        fadeOutLyrics.addTarget(R.id.lyrics);
+        fadeOutLyrics.setDuration(150);
+        collapseTransitionSet.addTransition(fadeOutLyrics);
+
+        ChangeBounds resetBounds = new ChangeBounds();
+        resetBounds.setDuration(200);
+        collapseTransitionSet.addTransition(resetBounds);
     }
 
     private void populate() {

@@ -91,12 +91,13 @@ public class AlbumDetailActivity extends Activity {
         mTransitionManager.transitionTo(mCurrentScene);
     }
 
+
     private void setupTransitions() {
         mTransitionManager = new TransitionManager();
         ViewGroup transitionRoot = detailContainer;
 
         // Expanded Scene.
-        final Scene mExpandedScene = Scene.getSceneForLayout(transitionRoot,
+        mExpandedScene = Scene.getSceneForLayout(transitionRoot,
                 R.layout.activity_album_detail_expanded, this);
 
         mExpandedScene.setEnterAction(new Runnable() {
@@ -120,7 +121,7 @@ public class AlbumDetailActivity extends Activity {
         expandTransitionSet.addTransition(fadeLyrics);
 
         // Collapsed Scene.
-        final Scene mCollapsedScene = Scene.getSceneForLayout(transitionRoot,
+        mCollapsedScene = Scene.getSceneForLayout(transitionRoot,
                 R.layout.activity_album_detail, this);
 
         mCollapsedScene.setEnterAction(new Runnable() {

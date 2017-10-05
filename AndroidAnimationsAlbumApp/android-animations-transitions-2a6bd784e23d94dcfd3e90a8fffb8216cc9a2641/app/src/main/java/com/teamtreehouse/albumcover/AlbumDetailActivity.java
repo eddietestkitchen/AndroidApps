@@ -40,6 +40,7 @@ public class AlbumDetailActivity extends Activity {
     private TransitionManager mTransitionManager;
     private Scene mExpandedScene;
     private Scene mCollapsedScene;
+    private Scene mCurrentScene;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +52,6 @@ public class AlbumDetailActivity extends Activity {
     }
 
     private void animate() {
-        /*
-        ObjectAnimator scalex = ObjectAnimator.ofFloat(fab, "scaleX", 0, 1);
-        ObjectAnimator scaley = ObjectAnimator.ofFloat(fab, "scaleY", 0, 1);
-        AnimatorSet scaleFab = new AnimatorSet();
-        scaleFab.playTogether(scalex, scaley);
-        */
 
         Animator scaleFab = AnimatorInflater.loadAnimator(this, R.animator.scale);
         scaleFab.setTarget(fab);
@@ -76,11 +71,6 @@ public class AlbumDetailActivity extends Activity {
         fab.setScaleX(0);
         fab.setScaleY(0);
 
-        /*
-        animatorTitle.setDuration(1000);
-        animatorTrack.setDuration(1000);
-        animatorTitle.setStartDelay(1000);
-        */
         AnimatorSet set = new AnimatorSet();
         set.playSequentially(animatorTitle, animatorTrack, scaleFab); // add as many as you like.
         set.start();
@@ -93,7 +83,12 @@ public class AlbumDetailActivity extends Activity {
 
     @OnClick(R.id.track_panel)
     public void onTrackPanelClicked(View view) {
-
+        if (mCurrentScene == mExpandedScene) {
+            mCurrentScene = mCollapsedScene;
+        } else {
+            mCurrentScene = mExpandedScene;
+        }
+        mTransitionManager.transitionTo(mCurrentScene);
     }
 
     private void setupTransitions() {
@@ -101,7 +96,7 @@ public class AlbumDetailActivity extends Activity {
         ViewGroup transitionRoot = detailContainer;
 
         // Expanded Scene.
-        Scene mExpandedScene = Scene.getSceneForLayout(transitionRoot,
+        final Scene mExpandedScene = Scene.getSceneForLayout(transitionRoot,
                 R.layout.activity_album_detail_expanded, this);
 
         mExpandedScene.setEnterAction(new Runnable() {
@@ -109,6 +104,7 @@ public class AlbumDetailActivity extends Activity {
             public void run() {
                 ButterKnife.bind(AlbumDetailActivity.this);
                 populate();
+                mCurrentScene = mExpandedScene;
             }
         });
 
@@ -124,7 +120,7 @@ public class AlbumDetailActivity extends Activity {
         expandTransitionSet.addTransition(fadeLyrics);
 
         // Collapsed Scene.
-        Scene mCollapsedScene = Scene.getSceneForLayout(transitionRoot,
+        final Scene mCollapsedScene = Scene.getSceneForLayout(transitionRoot,
                 R.layout.activity_album_detail, this);
 
         mCollapsedScene.setEnterAction(new Runnable() {
@@ -132,6 +128,7 @@ public class AlbumDetailActivity extends Activity {
             public void run() {
                 ButterKnife.bind(AlbumDetailActivity.this);
                 populate();
+                mCurrentScene = mCollapsedScene;
             }
         });
 
@@ -147,6 +144,10 @@ public class AlbumDetailActivity extends Activity {
         ChangeBounds resetBounds = new ChangeBounds();
         resetBounds.setDuration(200);
         collapseTransitionSet.addTransition(resetBounds);
+
+        mTransitionManager.setTransition(mExpandedScene, mCollapsedScene, collapseTransitionSet);
+        mTransitionManager.setTransition(mCollapsedScene, mExpandedScene, expandTransitionSet);
+        mCollapsedScene.enter();
     }
 
     private void populate() {

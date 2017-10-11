@@ -4,10 +4,8 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <TextView
-        android:id="@+id/TextView1"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Yay Fragments!"
-        android:layout_weight="0.05" />
+        android:layout_height="match_parent" />
 </LinearLayout>

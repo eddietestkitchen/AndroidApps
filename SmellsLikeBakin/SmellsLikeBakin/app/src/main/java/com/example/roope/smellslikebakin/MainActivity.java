@@ -7,18 +7,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class MainActivity extends LoggingActivity implements ListFragment.OnRecipeSelectedInterface {
+public class MainActivity extends AppCompatActivity implements ListFragment.OnRecipeSelectedInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListFragment fragment = new ListFragment();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.placeHolder, fragment);
-        fragmentTransaction.commit();
+        // Bug fixed, fragments no longer stack in activity when phone is rotated.
+        ListFragment savedFragment = (ListFragment) getFragmentManager().findFragmentById(R.id.placeHolder);
+        if (savedFragment == null) {
+            ListFragment fragment = new ListFragment();
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.placeHolder, fragment);
+            fragmentTransaction.commit();
+        }
     }
 
     @Override

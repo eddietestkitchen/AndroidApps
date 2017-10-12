@@ -1,8 +1,10 @@
 package com.example.roope.smellslikebakin;
 
+import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -14,11 +16,11 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnRe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Bug fixed, fragments no longer stack in activity when phone is rotated.
-        ListFragment savedFragment = (ListFragment) getFragmentManager().findFragmentById(R.id.placeHolder);
+        // Bug fix, fragments no longer stack in activity when phone is rotated.
+        ListFragment savedFragment = (ListFragment) getSupportFragmentManager().findFragmentById(R.id.placeHolder);
         if (savedFragment == null) {
             ListFragment fragment = new ListFragment();
-            FragmentManager fragmentManager = getFragmentManager();
+            FragmentManager fragmentManager = getSupportFragmentManager(); // changed to getSupportFragmentManager so back button works correctly, the top bar no longer disappears. :)
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.placeHolder, fragment);
             fragmentTransaction.commit();
@@ -26,7 +28,13 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnRe
     }
 
     @Override
-    public void OnListRecipeSelected(int index) {
-        Toast.makeText(MainActivity.this, Recipes.names[index], Toast.LENGTH_SHORT).show();
+    public void OnListRecipeSelected(int index) { // This method takes you to new activity, recipe etc.
+        Toast.makeText(MainActivity.this, Recipes.names[index], Toast.LENGTH_SHORT).show(); // Toast message what recipe was clicked.
+        ViewPagerFragment fragment = new ViewPagerFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.placeHolder, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

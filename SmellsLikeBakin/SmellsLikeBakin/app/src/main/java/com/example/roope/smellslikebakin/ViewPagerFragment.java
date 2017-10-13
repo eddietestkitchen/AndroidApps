@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 public class ViewPagerFragment extends Fragment {
     public static final String KEY_RECIPE_INDEX = "recipe_index";
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

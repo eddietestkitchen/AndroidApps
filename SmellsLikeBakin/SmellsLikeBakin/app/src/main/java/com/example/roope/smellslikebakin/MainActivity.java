@@ -16,6 +16,28 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnRe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
+        if (!isTablet) {
+            ListFragment savedFragment = (ListFragment) getSupportFragmentManager()
+                    .findFragmentByTag(LIST_FRAGMENT);
+            if (savedFragment == null) {
+                ListFragment fragment = new ListFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager(); // changed to getSupportFragmentManager so back button works correctly, the top bar no longer disappears. :)
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.placeHolder, fragment, LIST_FRAGMENT);
+                fragmentTransaction.commit();
+            }
+        } else {
+            GridFragment savedFragment = (GridFragment) getSupportFragmentManager()
+                    .findFragmentByTag(LIST_FRAGMENT);
+            if (savedFragment == null) {
+                GridFragment fragment = new GridFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager(); // changed to getSupportFragmentManager so back button works correctly, the top bar no longer disappears. :)
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.placeHolder, fragment, LIST_FRAGMENT);
+                fragmentTransaction.commit();
+            }
+        }
 
         // Bug fix, fragments no longer stack in activity when phone is rotated.
         ListFragment savedFragment = (ListFragment) getSupportFragmentManager()

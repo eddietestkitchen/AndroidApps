@@ -65,8 +65,10 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.commit();
     }
 
+
+
     @Override
-    public void OnGridRecipeSelected(int index) {
+    public void onGridRecipeSelected(int index) {
 
     }
 }

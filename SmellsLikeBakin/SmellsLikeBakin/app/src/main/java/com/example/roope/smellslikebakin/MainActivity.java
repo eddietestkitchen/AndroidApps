@@ -39,17 +39,6 @@ public class MainActivity extends AppCompatActivity
                 fragmentTransaction.commit();
             }
         }
-
-        // Bug fix, fragments no longer stack in activity when phone is rotated.
-        ListFragment savedFragment = (ListFragment) getSupportFragmentManager()
-                .findFragmentByTag(LIST_FRAGMENT);
-        if (savedFragment == null) {
-            ListFragment fragment = new ListFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager(); // changed to getSupportFragmentManager so back button works correctly, the top bar no longer disappears. :)
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.placeHolder, fragment, LIST_FRAGMENT);
-            fragmentTransaction.commit();
-        }
     }
 
     @Override
@@ -64,7 +53,6 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-
 
 
     @Override

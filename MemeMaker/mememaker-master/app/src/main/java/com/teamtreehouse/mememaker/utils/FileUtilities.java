@@ -21,7 +21,7 @@ import java.io.OutputStream;
 public class FileUtilities {
 
     public static void saveAssetImage(Context context, String assetName) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         File fileToWrite = new File(fileDirectory, assetName);
 
         AssetManager assetManager = context.getAssets();
@@ -36,6 +36,10 @@ public class FileUtilities {
         }
     }
 
+    public static File getFileDirectory(Context context) {
+        return context.getFilesDir();
+    }
+
     private static void copyFile(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte[1024];
         int read;
@@ -45,7 +49,7 @@ public class FileUtilities {
     }
 
     public static File[] listFiles(Context context) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         File[] filteredFiles = fileDirectory.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
@@ -78,7 +82,7 @@ public class FileUtilities {
 
 
     public static void saveImage(Context context, Bitmap bitmap, String name) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         File fileToWrite = new File(fileDirectory, name);
 
         try {
@@ -92,5 +96,4 @@ public class FileUtilities {
             e.printStackTrace();
         }
     }
-
 }

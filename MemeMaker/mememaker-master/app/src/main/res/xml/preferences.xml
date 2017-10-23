@@ -7,5 +7,5 @@
         android:dialogTitle="@string/title_storage_type"
         android:entries="@array/storageEntries"
         android:entryValues="@array/storageValueEntries"
-        android:defaultValue="@string/storage_default_value"
+        android:defaultValue="@string/storage_default_value" />
 </PreferenceScreen>

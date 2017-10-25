@@ -22,6 +22,23 @@ public class MemeDataSource {
         SQLiteDatabase database = mMemeSQLiteHelper.getReadableDatabase();
         database.close();
     }
+
+    private SQLiteDatabase open() {
+        return mMemeSQLiteHelper.getWritableDatabase();
+    }
+
+    private void close(SQLiteDatabase database) {
+        database.close();
+    }
+
+    public void create(Meme meme) {
+        SQLiteDatabase database = open();
+        database.beginTransaction();
+        //implementation details
+        database.setTransactionSuccessful();
+        database.endTransaction();
+        close(database);
+    }
 }
 
 

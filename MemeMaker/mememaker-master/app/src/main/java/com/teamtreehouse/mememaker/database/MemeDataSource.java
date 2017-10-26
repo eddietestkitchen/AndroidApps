@@ -30,7 +30,9 @@ public class MemeDataSource {
     }
 
     public ArrayList<Meme> read() {
-        return null;
+        ArrayList<Meme> memes = readMemes();
+        addMemeAnnotations(memes);
+        return memes;
     }
 
     public ArrayList<Meme> readMemes() {
@@ -93,7 +95,7 @@ public class MemeDataSource {
 
     private String getStringFromColumnName(Cursor cursor, String columnName) {
         int columnIndex = cursor.getColumnIndex(columnName);
-        return cursor.getString(columnIndex)
+        return cursor.getString(columnIndex);
     }
 
     public void create(Meme meme) {

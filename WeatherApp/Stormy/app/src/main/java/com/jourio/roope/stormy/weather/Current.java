@@ -52,8 +52,8 @@ public class Current {
         mTime = time;
     }
 
-    public double getTemperature() {
-        return (int)Math.round(mTemperature);
+    public int getTemperature() {
+        return (int) Math.round(mTemperature);
     }
 
     public void setTemperature(double temperature) {

@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         getForecast(latitude, longitude);
 
-        Log.d(TAG, "Main UI code is running!");
+        Log.d(TAG, "Main UI code is running");
     }
 
     private void getForecast(double latitude, double longitude) {

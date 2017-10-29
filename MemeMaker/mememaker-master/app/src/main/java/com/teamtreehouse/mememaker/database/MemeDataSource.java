@@ -10,6 +10,7 @@ import com.teamtreehouse.mememaker.models.Meme;
 import com.teamtreehouse.mememaker.models.MemeAnnotation;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MemeDataSource {
 
@@ -56,10 +57,10 @@ public class MemeDataSource {
                 MemeSQLiteHelper.MEMES_TABLE,
                 new String[] {MemeSQLiteHelper.COLUMN_MEME_NAME, BaseColumns._ID, MemeSQLiteHelper.COLUMN_MEME_ASSET},
                 null, // Selection
-                null, // Selection args (First time doing this and I'm cracking up! !!!!! :D:D:D:D)
+                null, // Selection args
                 null, // group by
                 null, // having
-                null); // order
+                MemeSQLiteHelper.COLUMN_MEME_CREATE_DATE + " DESC"); // order
 
         ArrayList<Meme> memes = new ArrayList<Meme>();
         if (cursor.moveToFirst()) {
@@ -152,6 +153,7 @@ public class MemeDataSource {
         ContentValues memeValues = new ContentValues();
         memeValues.put(MemeSQLiteHelper.COLUMN_MEME_NAME, meme.getName());
         memeValues.put(MemeSQLiteHelper.COLUMN_MEME_ASSET, meme.getAssetLocation());
+        memeValues.put(MemeSQLiteHelper.COLUMN_MEME_CREATE_DATE, new Date().getTime());
         long memeID = database.insert(MemeSQLiteHelper.MEMES_TABLE, null, memeValues); // second argument only needed when trying to insert a row without any value.
 
         for (MemeAnnotation annotation : meme.getAnnotations()) {

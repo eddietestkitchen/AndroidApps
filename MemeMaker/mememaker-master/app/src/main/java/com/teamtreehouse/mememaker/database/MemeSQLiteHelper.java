@@ -52,7 +52,7 @@ public class MemeSQLiteHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(CREATE_MEMES);
         sqLiteDatabase.execSQL(CREATE_ANNOTATIONS);
     }
-    
+
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         switch (oldVersion) {

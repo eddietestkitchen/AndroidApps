@@ -10,16 +10,16 @@
 
     <ListView
         android:id="@android:id/list"
-        android:layout_width="372dp"
-        android:layout_height="580dp"
+        android:layout_width="495dp"
+        android:layout_height="844dp"
         android:background="@drawable/bg_gradient"
         android:divider="@null"
         android:dividerHeight="0dp"
         android:paddingBottom="60dp"
         android:paddingLeft="32dp"
         android:paddingTop="60dp"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="-7dp"/>
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="-12dp"/>
 
     <TextView
         android:id="@+id/thisWeekLabel"

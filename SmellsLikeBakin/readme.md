@@ -1,4 +1,4 @@
-Smells Like Bakin, displays different kinds of recipes and instructions for different kinds of food.
+Smells Like Bakin, displays different kinds of recipes and instructions for different kinds of foods.
 
 
 Screenshots
